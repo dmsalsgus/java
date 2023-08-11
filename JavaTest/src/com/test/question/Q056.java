@@ -1,7 +1,7 @@
 package com.test.question;
 import java.util.*;
 
-public class Q056 {
+public class Q056 {  //숫자를 2개 입력받아 각각의 약수와 두 숫자의 공약수를 구하시오.
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		
@@ -30,7 +30,6 @@ public class Q056 {
 				}
 			}
 		}
-		
 		//if를 사용해서 조건문에 삼항연산자로 쓰면 더 간결하게 표현가능
 		/*
 		for(int i=1; i<=((num1>num2)?num1:num2); i++) {

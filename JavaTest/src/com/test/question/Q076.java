@@ -1,7 +1,7 @@
 package com.test.question;
 import java.util.*;
 
-public class Q076 {
+public class Q076 {  //성적을 입력받아 아래와 같이 출력하시오.
 	public static void main(String[] args) {
 		String[][] score =new String[10][3];  //배열 선언.
 		Scanner sc = new Scanner(System.in);

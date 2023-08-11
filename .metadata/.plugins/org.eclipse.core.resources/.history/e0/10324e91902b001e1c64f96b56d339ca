@@ -1,0 +1,33 @@
+package com.test.question;
+import java.util.*;
+
+public class Q067 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in); //scanner선언.
+		int[] original= {5,6,1,3,2,8,7,4,10,9};  //초기화된 배열 선언.
+		
+		System.out.print("삽입 위치 : ");
+		int location=sc.nextInt();
+		System.out.print("값 : ");
+		int value=sc.nextInt();
+		
+		System.out.print(Arrays.toString(original));
+		System.out.println();
+		for(int i=0; i<original.length; i++) {
+			if(i==location) { //삽입 위치와 배열의 위치가 같으면
+				for(int j=original.length; j>location; j--) {
+					original[j-1]=original[j-2];
+				}
+				original[i]=value;
+			}else continue;
+		}
+		
+		System.out.print(Arrays.toString(original));
+		
+		
+		
+		
+		
+		
+	}
+}

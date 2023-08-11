@@ -1,12 +1,12 @@
 package com.test.question;
 import java.util.*;
 
-public class Q079 {
+public class Q079 {  //2시방향 마방진
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int[][] arr=new int[3][3];
 		Random rd=new Random();
-		int num = rd.nextInt(9)+1;
+		int num = rd.nextInt(9)+1;   //1~9
 		
     	int a = (int)(num /3);  //배열위치
     	int b = (int)(num % 3);   //배열위치
@@ -14,28 +14,20 @@ public class Q079 {
 	    for(int i =1; i<=9; i++) {
 	    	if(arr[a][b]==0) {
 	    		arr[a][b] = i;
-	    	}
-	    	else if (arr[a][b] != 0) { // 이동
+	    	}else if (arr[a][b] != 0) { // 이동
 	    		a= a -1;
 		    	b = b+1;
-		    	if (a<0) {
-					a = 2;
-				}
-		    	if (b>2) {
-					b=0;
-				}
+		    	if (a<0) a = 2;
+		    	if (b>2) b=0;
+		    	
 		    	if ((arr[a][b] < i )&& (arr[a][b] != 0)) {
 		    		a = a+1;
 		    		b = b+1;
-		    		if(a>2) {
-		    			a=0;
-		    		}
-		    		if(b>2) {
-		    			b=0;
-		    		}
+		    		if(a>2) a=0;
+		    		if(b>2) b=0;
+		    		
 		    		arr[a][b] =i;
-		    	}
-		    	else arr[a][b] =i;
+		    	}else arr[a][b] =i;
 			}
 	    }
 	    //출력

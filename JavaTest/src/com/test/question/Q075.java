@@ -1,6 +1,13 @@
 package com.test.question;
 
-public class Q075 {
+public class Q075 {  //주어진 규칙에 따라 아래와 같이 출력하시오.
+	/*
+	1   2   3   4   10
+    5   6   7   8   26
+    9   10  11  12  42
+    13  14  15  16  58
+    28  32  36  40  136
+    */
 	public static void main(String[] args) {
 		int[][] nums=new int[5][5];
 		int n=1, sum;

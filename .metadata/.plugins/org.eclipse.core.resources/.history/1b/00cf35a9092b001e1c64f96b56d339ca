@@ -1,0 +1,17 @@
+package com.test.question;
+
+public class Q059 {
+	public static void main(String[] args) {
+		int sum = 0;
+		int high = 1;
+		int num = 1;
+		while (true) {
+			if (num >= 1 && num < 100) {
+				sum += num;
+				System.out.print(num+" + ");
+				num += high;
+				high++;
+			}else break;
+		}System.out.print("="+sum);
+	}
+}

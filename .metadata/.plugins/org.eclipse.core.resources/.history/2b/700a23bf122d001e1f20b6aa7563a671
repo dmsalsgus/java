@@ -1,0 +1,11 @@
+package com.test.question;
+
+public class Q081 {  //수업시간 내용 참고
+	//substring으로 추출 or split구분자로 쪼개기
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}

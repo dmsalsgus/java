@@ -1,0 +1,23 @@
+package com.test.java;
+
+public class Ex32_Array {
+	public static void main(String[] args) {
+		//배열(=Array) : 자료 구조 중 하나, 참조형에 포함된다.
+		//배열은 여러개의 데이터를 저장할 수 있는 자료형의 집합 데이터
+		//같은 자료형이나 같은 성격의 데이터 집합
+		//
+
+		m1();
+		
+	}
+
+	private static void m1() {
+		// 학생 3명의 국어 점수를 저장해서 총점이나 평균(실수) 구하기
+		int kor1=100, kor2=90, kor3=80;
+		int total=kor1+kor2+kor3;
+		
+		double avg=total/3.0;  //또는 (double)total/3;
+		System.out.printf("%d점, %.1f",total, avg);
+		
+	}
+}

@@ -1,0 +1,23 @@
+package com.test.question;
+import java.util.*;
+
+public class Q066 {
+	public static void main(String[] args) {
+		Random rd=new Random();  //랜덤 선언.
+		//int random=rd.nextInt(45)+1;  //1~45난수 생성
+		int[] lotto=new int[6];  //배열 선언.
+		
+		for(int i=0; i<6; i++) {
+			lotto[i]+=rd.nextInt(45)+1;;
+			for(int j=0; j<6; j++) {
+				if(lotto[i]==lotto[j]) {
+					i--;
+				}
+			}
+		}
+		
+		System.out.println(Arrays.toString(lotto));
+		
+		
+	}
+}

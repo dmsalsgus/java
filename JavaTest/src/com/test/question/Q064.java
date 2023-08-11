@@ -1,7 +1,7 @@
 package com.test.question;
 import java.util.*;
 
-public class Q064 {
+public class Q064 {  //1~20 사이의 난수를 담고 있는 배열을 생성하고 최댓값과 최솟값을 출력하시오.
 	public static void main(String[] args) {
 		Random rd=new Random(); //랜덤 선언.
 		int[] original = new int[20];

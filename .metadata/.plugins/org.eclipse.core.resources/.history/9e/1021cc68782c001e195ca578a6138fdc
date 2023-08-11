@@ -1,0 +1,14 @@
+package com.test.question;
+
+import java.util.ArrayList;
+
+import com.sun.tools.javac.util.List;
+
+public class Q079 {
+	public static void main(String[] args) {
+		ArrayList l1 = new ArrayList(9);
+		System.out.println(l1);
+		
+		
+	}
+}

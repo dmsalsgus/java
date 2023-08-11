@@ -1,0 +1,14 @@
+package com.test.question;
+
+import java.util.ArrayList;
+
+import com.sun.tools.javac.util.List;
+
+public class Q079 {
+	public static void main(String[] args) {
+		Integer[] l1 = {{0,0,0},{0,0,0},{0,0,0}};
+		System.out.println(l1);
+		
+		
+	}
+}

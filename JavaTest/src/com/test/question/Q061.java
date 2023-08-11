@@ -1,7 +1,7 @@
 package com.test.question;
 import java.util.*;
 
-public class Q061 {
+public class Q061 {  //숫자를 5개 입력받아 배열에 담은 뒤 역순으로 출력하시오.
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int[] nums=new int[5];  //nums 배열 선언.

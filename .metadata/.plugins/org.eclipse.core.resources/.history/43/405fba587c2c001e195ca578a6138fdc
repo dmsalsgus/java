@@ -1,0 +1,14 @@
+package com.test.question;
+
+import java.util.ArrayList;
+
+import com.sun.tools.javac.util.List;
+
+public class Q079 {
+	public static void main(String[] args) {
+		int[][] arr = new int[3][3];
+		System.out.println(arr);
+		
+		
+	}
+}

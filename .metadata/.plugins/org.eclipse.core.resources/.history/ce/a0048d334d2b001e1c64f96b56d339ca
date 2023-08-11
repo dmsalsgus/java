@@ -1,0 +1,16 @@
+package com.test.question;
+import java.util.*;
+
+public class Q060 {
+	public static void main(String[] args) {
+		
+		
+		
+		
+		
+	}
+	public static void fibo(int num) {
+		
+		
+	}
+}

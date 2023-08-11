@@ -1,6 +1,6 @@
 package com.test.question;
 
-public class Q063 {
+public class Q063 {  //int 배열을 매개변수로 받아 내용을 문자열로 반환하는 dump 메소드를 구현하시오.
 	public static void main(String[] args) {
 
 		int[] list = new int[4];

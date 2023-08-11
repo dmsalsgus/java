@@ -1,0 +1,25 @@
+package com.test.question;
+import java.util.*;
+
+public class Q069 {
+	public static void main(String[] args) {
+		Random rd=new Random(); //랜덤 선언(난수).
+		Scanner sc = new Scanner(System.in);  //Scanner 선언.
+		System.out.print("배열 길이 : ");
+		int input=sc.nextInt();
+		int[] original=new int[input];  //원본 배열 선언.
+		
+		//int odd=input/2+1;
+		int[] result=new int[odd];  //결과 배열 선언.
+		
+		for(int i=0; i<input; i++) {
+			original[i]+=rd.nextInt(9)+1; //랜덤으로 값 집어넣기
+		}
+		System.out.print(Arrays.toString(original));
+		System.out.println();
+		for(int i=0; i<input/2; i++) {
+			result[i]+=rd.nextInt(9)+1; //랜덤으로 값 집어넣기
+		}
+		System.out.print(Arrays.toString(result));
+	}
+}

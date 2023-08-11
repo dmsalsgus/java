@@ -1,0 +1,11 @@
+package com.test.question;
+import java.util.*;
+
+public class Q064 {
+	public static void main(String[] args) {
+		Random rd=new Random();
+		int random=rd.nextInt(20)+1;
+		
+		System.out.println(random);
+	}
+}

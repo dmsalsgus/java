@@ -1,0 +1,18 @@
+package com.test.question;
+
+public class Q060 {
+	public static void main(String[] args) {
+		
+		int num=100;
+		
+		fibo(num);
+		System.out.print(num);
+	}
+	public static int fibo(int num) {
+		int result;
+		if(num<=1) {
+			return result=1;
+		}else 
+			return result=fibo(num-2) + fibo(num-1);
+	}
+}

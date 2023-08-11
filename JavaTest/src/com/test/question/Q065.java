@@ -1,7 +1,10 @@
 package com.test.question;
 import java.util.*;
 
-public class Q065 {
+public class Q065 {  //난수를 담고 있는 배열을 생성한 뒤 아래와 같이 출력하시오.
+	//난수를 20개 발생 후 배열에 넣는다.
+	//난수는 1 ~ 20 사이
+	//배열을 탐색하여 범위에 만족하는 숫자만 출력한다.
 	public static void main(String[] args) {
 		Random rd=new Random(); //랜덤 선언.
 		int[] original = new int[20];  //배열 선언.

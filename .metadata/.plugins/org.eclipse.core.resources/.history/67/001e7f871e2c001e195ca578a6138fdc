@@ -1,0 +1,60 @@
+package com.test.java;
+
+public class Ex33_Array {
+	public static void main(String[] args) {
+		//다차원 배열 : 1~3차원 배열
+		
+		m1();
+		
+		
+	}
+
+	private static void m1() {
+		// 1차원 배열
+		int[] nums1=new int[3];
+		
+		//1차원 배열
+		nums1[0]=100;
+		nums1[1]=200;
+		nums1[2]=300;
+		
+		for(int i=0; i<3; i++) {
+			System.out.printf("nums1[%d] = %d\n",i,nums1[i]);
+		}
+		System.out.println();
+		System.out.println();
+		
+		//2차원 배열(2행 3열짜리)
+		int[][] nums2=new int[2][3];  //2=2차원(행), 3=1차원(열)
+		
+		nums2[0][0]=100;
+		nums2[0][1]=200;
+		nums2[0][2]=300;
+		
+		nums2[1][0]=400;
+		nums2[1][1]=500;
+		nums2[1][2]=600;
+		
+		for(int i=0; i<3; i++) {
+			for(int j=0; j<3; j++) {
+				System.out.printf("nums2[%d][%d] = %d\n",i,j,nums2[i][j]);
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

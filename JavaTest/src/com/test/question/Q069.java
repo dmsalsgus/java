@@ -1,7 +1,9 @@
 package com.test.question;
 import java.util.*;
 
-public class Q069 {
+public class Q069 {  //배열의 요소를 순차적으로 2개씩 더한 결과를 배열로 생성한 뒤 출력하시오.
+	//ex) 원본: [ 1, 5, 3, 6, 2, 7, 8, 2, 2, 9 ]
+	//     결과: [ 6, 9, 9, 10, 11 ]
 	public static void main(String[] args) {
 		Random rd=new Random(); //랜덤 선언(난수).
 		Scanner sc = new Scanner(System.in);  //Scanner 선언.

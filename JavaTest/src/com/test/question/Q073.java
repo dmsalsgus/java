@@ -1,6 +1,13 @@
 package com.test.question;
 
-public class Q073 {
+public class Q073 {  //아래와 같이 출력하시오.
+	/*
+	1    2   3	4	 5
+	6	  7	   8 	9	 0
+	10	 11 12	0	 0
+	13	 14  0 	0	 0
+	15  0   0	0	 0
+	*/
 	public static void main(String[] args) {
 		int[][] nums=new int[5][5];
 		int n=1;

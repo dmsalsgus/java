@@ -1,0 +1,224 @@
+package com.test.java;
+import java.util.*;
+
+import java.util.Scanner;
+
+public class Ex34_String {
+	private static final String m2 = null;
+
+	public static void main(String[] args) {
+		//문자열(String) : jdk 제공하는 문자열 조작 가능
+		
+		//m1();
+		//m2();
+		//m3();
+		//m4();
+		//m5();
+		//m6();
+		m7();
+	}
+
+	private static void m7() {
+		// 주민등록번호인데 중간에 반드시 하이픈 기입하기.
+		
+		String jumin="970728-2012345";
+		
+		if(jumin.charAt(6)=='-') {
+			System.out.println("0");
+		}else System.out.println("x");
+		
+		if(jumin.charAt('-')==6) {
+			System.out.println("0");
+		}else System.out.println("x");
+		
+		////////게시판 글쓰기 : 관리자로서 금지어 설정하기
+		String word="바보";
+		String content="안녕하세요. 반갑습니다~ ㅂㅏㅂㅗ자바를 공부하고 있어요.";
+		
+		if(content.indexOf(word)>-1) {  //금지어가 발견되었다면
+			System.out.println("금지어 발견!");
+		}else System.out.println("글쓰기 계속 진행~");
+		
+		String[] words= {"바보", "멍청이", "메롱", "ㅂㅏㅂㅗ"};
+		for(int i=0; i<words.length; i++) {
+			if(content.indexOf(words[i])>1) {
+				System.out.println("금지어 발견!");
+				break;  //이미 금지어 발견했으니 굳이 뒤에까지 검사할 필요없음.
+			}
+		}	
+	}
+
+	private static void m6() {
+		// 문자열 조작
+		//1. int length()
+		//2. char charAt(int)
+		//3. String trim()
+		
+		//문자열 검색
+		//- int indexOf(char)
+		//- int indexOf(String)
+		//- int indexOf(char, int)
+		//- int indexof(String, int)
+		
+		//- int indexOf(char)
+		//- int indexOf(String)
+		//- int indexOf(char, int)
+		//- int indexof(String, int)
+		
+		String txt="안녕하세요. 홍길동입니다.";
+		int index=-1;  //찾는 위치가 0번일수도 있고, 마지막일 수도 있지만
+		//못찾더라도 숫자를 돌려줘야 하기 때문에 존재하지 않는 위치값을 돌려주는것.
+		//그래서 -1로 초기화하는 것
+		/*
+		index=txt.indexOf('하');
+		System.out.println(index);
+		index=txt.indexOf('홍');
+		System.out.println(index);
+		index=txt.indexOf('김');
+		System.out.println(index);
+		index=txt.indexOf("홍길동");  //3글자인데 indexOf는 숫자하나만 return하기때문에 제일 첫번째인 7을 반환.
+		System.out.println(index);
+		System.out.println();
+		*/
+		///////////////////////////////////////
+		/*
+		txt="안녕하세요. 홍길동입니다. 반갑습니다. 홍길동입니다. 안녕히가세요. 홍길동입니다.";
+		index=txt.indexOf("홍길동",0);  // 7return. 첫번째 홍길동.
+		//0번째부터 시작해서 오른쪽으로 이동하며 찾아주세요.
+		System.out.println(index);
+		
+		index=txt.indexOf("홍길동",10); //앞에 건너뛰고 '입' 부터 검색한다.  //22return. 
+		System.out.println(index);
+		
+		index=txt.indexOf("홍길동",25); //38return. 
+		System.out.println(index);
+		*/
+		//위의 내용들을 편하게 for문으로.
+		index=-1;
+		for(int i=0; i<3; i++){
+			index=txt.indexOf("홍길동",index);
+			System.out.println(index);
+			
+			index+=3;
+		}
+		//
+		index=-1;
+		while(true) {
+			index=txt.indexOf("홍길동",index);
+			if(index==-1) {  //홍길동을 못찾았니?
+				break;  //그럼 빠져나가.
+			}
+			System.out.println(index);
+			index+=3;
+		}
+		
+		/////////////
+		txt="안녕하세요. 홍길동입니다. 반갑습니다. 홍길동입니다.";
+		System.out.println(txt.indexOf("홍길동"));  //7  찾는 방향이 왼->오
+		System.out.println(txt.lastIndexOf("홍길동"));  //22  //오->왼
+			
+	}
+
+	private static void m5() {
+		// 공백 제거 : String trim()
+		//문자열 내의 공백에는 space, tab, enter(개행)문자가 있는데 이를 제거한다.
+		//모든 공백을 없애는 것이 아닌 문자열의 시작이나 끝에 있는 공백을 제거.
+		
+		String txt="     하나     둘     셋     ";
+		System.out.printf("[%s]\n",txt);
+		System.out.printf("[%s]\n",txt.trim());
+		
+	}
+
+	private static void m4() {
+		// 주민등록번호 : 970727-1000001
+		//하이픈 필수로 포함시켜라.
+		
+		String jumin="970727-1000001";
+		
+		//System.out.println(jumin.charAt(6));
+		
+		if(jumin.charAt(6)=='-') {
+			System.out.println("올바른 번호입니다.");
+			
+			if(jumin.charAt(7)=='1'||jumin.charAt(7)=='3') {
+				System.out.println("남자입니다.");
+			}else System.out.println("여자입니다.");
+			
+		}else System.out.println("잘못된 번호입니다.");
+		
+	}
+
+	private static void m3() {
+		//Q. 회원가입에서 아이디를 영어 소문자만 입력 가능하게 하시오.
+		Scanner sc = new Scanner(System.in);
+		System.out.print("아이디 : ");
+		String id=sc.next();
+		//아이디는 통째로는 안되고, 분리해서 검사 가능하다.
+		for(int i=0; i<id.length(); i++) {
+			char c=id.charAt(i);
+			//System.out.println(c);
+			
+			if(c < 'a' || c > 'z') {  //소문자가 아니면
+				System.out.println("잘못된 문자가 발견되었습니다.");
+				break;
+			}
+		}
+		System.out.println("종료");
+		
+	}
+
+	private static void m2() {
+		// 문자열 추출 : char charAt(int index)
+		//자바는 zero-based Index
+		
+		String txt="안녕하세요. 홍길동입니다.";
+		char c=txt.charAt(3);
+		System.out.println(c);
+		
+		c=txt.charAt(7);
+		System.out.println(c);
+		
+		c=txt.charAt(13);
+		System.out.println(c);
+		
+		//c=txt.charAt(14);   //에러남.
+		//System.out.println(c);
+		
+		c=txt.charAt(txt.length()-1);    //마지막 문자
+		System.out.println(c);
+		
+	}
+
+	private static void m1() {
+		//문자열은 String, 문자는 char
+		//문자열=문자의 집합(String==char[])
+		
+		//문자열 조작 기능==배열 조작 기능 유사
+		//문자열 길이
+		//1. int length() : 문자열의 글자수
+		
+		//홍길동입니다.
+		char[] clist= {'홍', '길', '동', '입', '니', '다', '.'};
+		System.out.println(clist.length);   //7
+		
+		String str="홍길동입니다."; 
+		System.out.println(str.length());  //7
+		
+		System.out.println("홍길동".length());  //3
+		
+		System.out.println("A1가$".length());  //4
+		
+		//Q. 회원가입을 해서 이름을 2자~5자 이내로 작성하시오.
+		//유효성 검사하기
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("이름 : ");
+		String name=sc.next();
+		
+		if(name.length()>=2 && name.length()<=5) {
+			System.out.println("올바른 이름!");
+		}else System.out.println("다시 작성하시오.");
+		
+	}
+}

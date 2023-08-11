@@ -1,0 +1,50 @@
+package com.test.question;
+import java.util.*;
+
+public class Q076 {
+	public static void main(String[] args) {
+		String[][] score =new String[10][3];  //배열 선언.
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("국어 점수 : ");
+		int kor=sc.nextInt();
+		System.out.print("영어 점수 : ");
+		int eng=sc.nextInt();
+		System.out.print("수학 점수 : ");
+		int math=sc.nextInt();
+		/*
+		int a=kor/10;
+		int b=eng/10;
+		int c=math/10;
+		
+		for(int i=9; i>=10-a; i--) {
+				score[i][0]+="■";
+		}
+		for(int i=9; i>=10-b; i--) {
+			score[i][1]+="■";
+		} 
+		for(int i=9; i>=10-c; i--) {
+			score[i][2]+="■";
+		} */
+		input(score,kor,0);
+		input(score,eng,1);
+		input(score,math,2);
+		
+		//출력
+		for(int i=0; i<10; i++) {
+			for(int j=0; j<3; j++) {
+				System.out.printf("%s",score[i][j]);
+			}
+			System.out.println();
+		}
+		
+	}
+
+	private static void input(String score[][], int num, int j) {
+		int a=num/10;
+		for(int i=9; i>=10-a; i--) {
+			score[i][j]+="■";
+		}
+	}
+	
+}
